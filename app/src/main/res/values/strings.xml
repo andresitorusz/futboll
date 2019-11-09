@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">futboll</string>
+    <string name="matches">Matches</string>
+    <string name="teams">Teams</string>
+</resources>
