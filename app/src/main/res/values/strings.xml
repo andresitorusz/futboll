@@ -2,4 +2,12 @@
     <string name="app_name">futboll</string>
     <string name="matches">Matches</string>
     <string name="teams">Teams</string>
+    <string name="team_name">Team Name</string>
+
+
+    <string name="matches_fragment">Matches Fragment</string>
+    <string name="teams_fragment">Teams Fragment</string>
+    <string name="no_data_found">No data found</string>
+    <string name="overview">Overview</string>
+    <string name="players">Players</string>
 </resources>
