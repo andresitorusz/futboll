@@ -1,4 +1,4 @@
-package andresitorusz.futboll.fragments
+package andresitorusz.futboll.fragments.team
 
 import andresitorusz.futboll.models.League
 import andresitorusz.futboll.models.Team

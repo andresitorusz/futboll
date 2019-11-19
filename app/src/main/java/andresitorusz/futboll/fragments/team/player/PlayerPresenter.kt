@@ -1,4 +1,4 @@
-package andresitorusz.futboll.fragments
+package andresitorusz.futboll.fragments.team.player
 
 import andresitorusz.futboll.models.PlayerResponse
 import andresitorusz.futboll.networks.ApiRepository

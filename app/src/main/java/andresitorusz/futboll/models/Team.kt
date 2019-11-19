@@ -34,17 +34,13 @@ data class Team(
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
-    )
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeValue(id)
-        parcel.writeString(teamId)
-        parcel.writeString(teamSport)
-        parcel.writeString(teamName)
-        parcel.writeString(teamDescription)
-        parcel.writeString(teamBadge)
-        parcel.writeString(teamBanner)
+    ) {
     }
+
+    override fun writeToParcel(dest: Parcel?, flags: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 
     override fun describeContents(): Int {
         return 0

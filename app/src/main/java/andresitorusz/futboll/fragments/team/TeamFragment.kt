@@ -1,4 +1,4 @@
-package andresitorusz.futboll.fragments
+package andresitorusz.futboll.fragments.team
 
 
 import andresitorusz.futboll.R
@@ -8,6 +8,7 @@ import andresitorusz.futboll.models.Team
 import andresitorusz.futboll.networks.ApiRepository
 import andresitorusz.futboll.utils.invisible
 import andresitorusz.futboll.utils.visible
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -43,7 +44,8 @@ class TeamFragment : Fragment(), TeamContract.View {
         adapter = TeamAdapter(teamLists)
         rv_team.layoutManager = GridLayoutManager(context, 3)
         rv_team.adapter = adapter
-        presenter = TeamPresenter(this, ApiRepository(), Gson())
+        presenter =
+            TeamPresenter(this, ApiRepository(), Gson())
         presenter.getListLeague()
     }
 

@@ -1,4 +1,4 @@
-package andresitorusz.futboll.fragments
+package andresitorusz.futboll.fragments.team.player
 
 
 import android.os.Bundle
@@ -47,7 +47,12 @@ class PlayerFragment : Fragment(), PlayerContract.View {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val teamId = arguments?.getString(KEY_ALL_PLAYER)
-        presenter = PlayerPresenter(this, ApiRepository(), Gson())
+        presenter =
+            PlayerPresenter(
+                this,
+                ApiRepository(),
+                Gson()
+            )
         adapter = PlayerAdapter(playerLists)
         recycler_view_player.layoutManager = GridLayoutManager(context, 3)
         recycler_view_player.adapter = adapter

@@ -38,22 +38,14 @@ data class Player(
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
-    ) {
-    }
+    )
 
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(playerId)
-        parcel.writeString(playerName)
-        parcel.writeString(playerWeight)
-        parcel.writeString(playerHeight)
-        parcel.writeString(playerPosition)
-        parcel.writeString(playerDescription)
-        parcel.writeString(playerProfile)
-        parcel.writeString(playerBack)
+    override fun writeToParcel(dest: Parcel?, flags: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun describeContents(): Int {
-        return 0
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     companion object CREATOR : Parcelable.Creator<Player> {

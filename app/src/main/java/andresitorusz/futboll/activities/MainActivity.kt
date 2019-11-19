@@ -1,8 +1,8 @@
 package andresitorusz.futboll.activities
 
 import andresitorusz.futboll.R
-import andresitorusz.futboll.fragments.MatchFragment
-import andresitorusz.futboll.fragments.TeamFragment
+import andresitorusz.futboll.fragments.match.MatchFragment
+import andresitorusz.futboll.fragments.team.TeamFragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:contentPadding="8dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/match_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20sp" />
+
+            <TextView
+                    android:id="@+id/match_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16sp" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                <TextView
+                        android:id="@+id/match_home_team"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/match_home_score"
+                        android:layout_toLeftOf="@id/match_home_score"
+                        android:gravity="end"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:id="@+id/match_home_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/text_view_versus"
+                        android:layout_toLeftOf="@id/text_view_versus"
+                        android:paddingStart="8dp"
+                        android:paddingLeft="8dp"
+                        android:textSize="18sp" />
+
+                <TextView
+                        android:id="@+id/text_view_versus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toEndOf="@id/text_view_versus"
+                        android:padding="16dp"
+                        android:text="@string/vs" />
+
+                <TextView
+                        android:id="@+id/match_away_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/text_view_versus"
+                        android:layout_toRightOf="@id/text_view_versus"
+                        android:paddingStart="10dp"
+                        android:paddingRight="10dp"
+                        android:textSize="18sp" />
+
+                <TextView
+                        android:id="@+id/match_away_team"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/match_away_score"
+                        android:layout_toRightOf="@id/match_away_score"
+                        android:gravity="start"
+                        android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

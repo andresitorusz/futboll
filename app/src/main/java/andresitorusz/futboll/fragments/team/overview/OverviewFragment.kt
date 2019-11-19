@@ -1,4 +1,4 @@
-package andresitorusz.futboll.fragments
+package andresitorusz.futboll.fragments.team.overview
 
 
 import android.os.Bundle
@@ -17,7 +17,8 @@ class OverviewFragment : Fragment() {
     companion object {
         private const val KEY_OVERVIEW = "key_overview"
         fun newInstance(values: String?): OverviewFragment {
-            val overviewTeamFragment = OverviewFragment()
+            val overviewTeamFragment =
+                OverviewFragment()
             val args = Bundle()
             args.putString(KEY_OVERVIEW, values)
             overviewTeamFragment.arguments = args

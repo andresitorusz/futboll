@@ -1,4 +1,4 @@
-package andresitorusz.futboll.fragments
+package andresitorusz.futboll.fragments.team
 
 import andresitorusz.futboll.models.LeagueResponse
 import andresitorusz.futboll.models.TeamResponse
@@ -16,8 +16,8 @@ class TeamPresenter(
     private val gson: Gson,
     private val context: CoroutineContextProvider = CoroutineContextProvider()
 ) {
-    private lateinit var jobTeam: Job
-    private lateinit var jobLeague: Job
+    private var jobTeam: Job? = null
+    private var jobLeague: Job? = null
 
     fun getListTeam(leagueId: String?) {
         jobTeam = GlobalScope.launch(context.main) {
@@ -33,7 +33,7 @@ class TeamPresenter(
             }
             teamView.hideLoading()
         }
-        jobTeam.start()
+        jobTeam?.start()
     }
 
     fun getListLeague() {
@@ -46,7 +46,7 @@ class TeamPresenter(
             teamView.showLeagues(league?.leagues?.filter { it.leagueSport.equals("Soccer") })
             teamView.hideLoading()
         }
-        jobLeague.start()
+        jobLeague?.start()
     }
 
     fun searchTeam(teamName: String?) {
@@ -66,11 +66,11 @@ class TeamPresenter(
     }
 
     fun cancelCoroutine() {
-        if (jobLeague.isActive && !(jobLeague.isCompleted)) {
-            jobLeague.cancel()
+        if (jobLeague!!.isActive && !(jobLeague!!.isCompleted)) {
+            jobLeague!!.cancel()
         }
-        if (jobTeam.isActive && !(jobTeam.isCompleted)) {
-            jobTeam.cancel()
+        if (jobTeam!!.isActive && !(jobTeam!!.isCompleted)) {
+            jobTeam!!.cancel()
         }
     }
 }
