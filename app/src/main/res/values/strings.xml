@@ -16,4 +16,12 @@
     <string name="next_match">Next Match</string>
     <string name="last_match">Last Match</string>
     <string name="vs">VS</string>
+    <string name="shots">Shots</string>
+    <string name="goals">Goals</string>
+    <string name="substitutes">Substitutes</string>
+    <string name="forward">Forward</string>
+    <string name="midfield">Midfield</string>
+    <string name="defense">Defense</string>
+    <string name="goalkeeper">Goalkeeper</string>
+    <string name="lineups">Lineups</string>
 </resources>

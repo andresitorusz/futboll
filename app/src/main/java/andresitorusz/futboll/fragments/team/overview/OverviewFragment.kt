@@ -39,5 +39,4 @@ class OverviewFragment : Fragment() {
         val overviewText = arguments?.getString(KEY_OVERVIEW)
         overview_text.text = overviewText
     }
-
 }

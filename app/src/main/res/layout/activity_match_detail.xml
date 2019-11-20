@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.MatchDetailActivity">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/match_detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="Date Match" />
+
+            <TextView
+                    android:id="@+id/match_detail_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Time" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/match_detail_home_logo"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="20dp" />
+
+                    <TextView
+                            android:id="@+id/match_detail_home_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="25sp" />
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/match_detail_home_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        tools:text="0" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/vs"
+                        android:textSize="30sp" />
+
+                <TextView
+                        android:id="@+id/match_detail_away_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        tools:text="0" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/match_detail_away_logo"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="20dp" />
+
+                    <TextView
+                            android:id="@+id/match_detail_away_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="15dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="25sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/LineDivider" />
+
+            <TextView
+                    style="@style/MiddleText"
+                    android:text="@string/goals"
+                    android:textColor="@color/colorPrimary" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/match_goal_home"
+                        style="@style/ViewContent.Left" />
+
+                <TextView
+                        android:id="@+id/match_goal_away"
+                        style="@style/ViewContent.Right" />
+            </RelativeLayout>
+
+            <TextView
+                    style="@style/MiddleText"
+                    android:text="@string/shots"
+                    android:textColor="@color/colorPrimary" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/match_home_shot"
+                        style="@style/ViewContent.Left" />
+
+                <TextView
+                        android:id="@+id/match_away_shot"
+                        style="@style/ViewContent.Right" />
+            </RelativeLayout>
+
+            <View style="@style/LineDivider" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="@string/lineups"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    style="@style/MiddleText"
+                    android:text="@string/goalkeeper"
+                    android:textColor="@color/colorPrimary" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/goalkeeper_home"
+                        style="@style/ViewContent.Left" />
+
+                <TextView
+                        android:id="@+id/goalkeeper_away"
+                        style="@style/ViewContent.Right" />
+            </RelativeLayout>
+
+            <TextView
+                    style="@style/MiddleText"
+                    android:text="@string/defense"
+                    android:textColor="@color/colorPrimary" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/defense_home"
+                        style="@style/ViewContent.Left" />
+
+                <TextView
+                        android:id="@+id/defense_away"
+                        style="@style/ViewContent.Right" />
+            </RelativeLayout>
+
+            <TextView
+                    style="@style/MiddleText"
+                    android:text="@string/midfield"
+                    android:textColor="@color/colorPrimary" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/midfield_home"
+                        style="@style/ViewContent.Left" />
+
+                <TextView
+                        android:id="@+id/midfield_away"
+                        style="@style/ViewContent.Right" />
+            </RelativeLayout>
+
+            <TextView
+                    style="@style/MiddleText"
+                    android:text="@string/forward"
+                    android:textColor="@color/colorPrimary" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/forward_home"
+                        style="@style/ViewContent.Left" />
+
+                <TextView
+                        android:id="@+id/forward_away"
+                        style="@style/ViewContent.Right" />
+            </RelativeLayout>
+
+            <TextView
+                    style="@style/MiddleText"
+                    android:text="@string/substitutes"
+                    android:textColor="@color/colorPrimary" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/substitutes_home"
+                        style="@style/ViewContent.Left" />
+
+                <TextView
+                        android:id="@+id/substitutes_away"
+                        style="@style/ViewContent.Right" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ProgressBar
+                android:id="@+id/progress_bar_match_detail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,17 +1,18 @@
 package andresitorusz.futboll.adapters
 
 import andresitorusz.futboll.R
+import andresitorusz.futboll.activities.MatchDetailActivity
 import andresitorusz.futboll.models.Match
 import andresitorusz.futboll.utils.dateFormatter
 import andresitorusz.futboll.utils.timeFormatter
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_matches.view.*
 import org.jetbrains.anko.startActivity
-import java.text.SimpleDateFormat
 
 class EventAdapter(private val matchLists: List<Match>) :
     RecyclerView.Adapter<EventAdapter.ViewHolder>() {
@@ -28,10 +29,8 @@ class EventAdapter(private val matchLists: List<Match>) :
             itemView.match_home_score.text = match.homeScore
             itemView.match_away_score.text = match.awayScore
             itemView.setOnClickListener {
-                //               //Fill this later
+                itemView.context.startActivity<MatchDetailActivity>(MatchDetailActivity.KEY_MATCH to match)
             }
-
-
         }
     }
 

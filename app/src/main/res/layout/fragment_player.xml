@@ -18,7 +18,9 @@
         <ProgressBar
                 android:id="@+id/progress_bar_player"
                 android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
 
     </RelativeLayout>
 </ScrollView>

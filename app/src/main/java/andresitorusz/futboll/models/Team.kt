@@ -26,6 +26,16 @@ data class Team(
     @SerializedName("strTeamFanart1")
     var teamBanner: String? = null
 ) : Parcelable {
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeValue(id)
+        parcel.writeString(teamId)
+        parcel.writeString(teamSport)
+        parcel.writeString(teamName)
+        parcel.writeString(teamDescription)
+        parcel.writeString(teamBadge)
+        parcel.writeString(teamBanner)
+    }
+
     constructor(parcel: Parcel) : this(
         parcel.readValue(Long::class.java.classLoader) as? Long,
         parcel.readString(),
@@ -36,11 +46,6 @@ data class Team(
         parcel.readString()
     ) {
     }
-
-    override fun writeToParcel(dest: Parcel?, flags: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
 
     override fun describeContents(): Int {
         return 0
