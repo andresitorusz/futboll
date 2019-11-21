@@ -18,7 +18,7 @@ class LeagueDetailActivity : AppCompatActivity() {
         val item = intent.getParcelableExtra<Item>(LeagueFragment.PARCELABLE_ITEM_DATA)
         LeagueDetailActivityUI(item!!).setContentView(this)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        supportActionBar?.title = "Futboll"
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -30,7 +30,8 @@ class LeagueDetailActivity : AppCompatActivity() {
         }
     }
 
-    inner class LeagueDetailActivityUI(private val item: Item) : AnkoComponent<LeagueDetailActivity> {
+    inner class LeagueDetailActivityUI(private val item: Item) :
+        AnkoComponent<LeagueDetailActivity> {
         private val viewId = 1
         private val imageId = 2
         private val nameId = 3
