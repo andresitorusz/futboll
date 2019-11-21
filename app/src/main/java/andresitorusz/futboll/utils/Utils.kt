@@ -3,6 +3,7 @@
 package andresitorusz.futboll.utils
 
 import android.annotation.SuppressLint
+import android.content.res.Resources
 import android.view.View
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -44,3 +45,6 @@ fun View.visible() {
 fun View.invisible() {
     visibility = View.INVISIBLE
 }
+
+val Int.dp: Int get() = (this * Resources.getSystem().displayMetrics.density).toInt()
+val Int.px: Int get() = (this / Resources.getSystem().displayMetrics.density).toInt()

@@ -4,13 +4,20 @@
     <item
             android:id="@+id/matches_fragment_item"
             android:enabled="true"
-            android:title="@string/matches"
             android:icon="@drawable/ic_matches"
-            app:showAsAction="ifRoom"/>
+            android:title="@string/matches"
+            app:showAsAction="ifRoom" />
     <item
             android:id="@+id/teams_fragment_item"
             android:enabled="true"
-            android:title="@string/teams"
             android:icon="@drawable/ic_teams"
-            app:showAsAction="ifRoom"/>
+            android:title="@string/teams"
+            app:showAsAction="ifRoom" />
+
+    <item
+            android:id="@+id/league_fragment_item"
+            android:enabled="true"
+            android:icon="@drawable/ic_league"
+            android:title="@string/leagues"
+            app:showAsAction="ifRoom" />
 </menu>

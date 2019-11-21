@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         package="andresitorusz.futboll">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,8 +15,11 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
-        <activity android:name=".activities.MatchDetailActivity"></activity>
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.LeagueDetailActivity"></activity>
+        <activity android:name=".activities.SearchActivity" />
+        <activity android:name=".activities.MatchDetailActivity" />
         <activity android:name=".activities.TeamDetailActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
