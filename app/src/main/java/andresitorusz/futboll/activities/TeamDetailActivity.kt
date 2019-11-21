@@ -25,6 +25,8 @@ class TeamDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_team_detail)
 
+        supportActionBar?.title = "Futboll"
+
         team = intent.getParcelableExtra(KEY_TEAM)
         val teamId = team?.teamId
         val teamDescription = team?.teamDescription
@@ -35,8 +37,11 @@ class TeamDetailActivity : AppCompatActivity() {
             .into(team_detail_banner)
 
         page = mutableMapOf(
-            OverviewFragment.newInstance(teamDescription) to getString(R.string.overview), PlayerFragment.newInstance(teamId) to getString(
-                    R.string.players))
+            OverviewFragment.newInstance(teamDescription) to getString(R.string.overview),
+            PlayerFragment.newInstance(teamId) to getString(
+                R.string.players
+            )
+        )
         detail_team_view_pager.adapter = ViewPagerUtils(supportFragmentManager, page)
         detail_team_tab.setupWithViewPager(detail_team_view_pager)
     }

@@ -11,10 +11,4 @@ interface TeamContract {
         fun showTeamList(data: List<Team>?)
         fun showLeagues(data: List<League>?)
     }
-
-    interface Presenter {
-        fun getTeamData(leagueName: String)
-        fun searchTeam(teamName: String)
-        fun onDestroy()
-    }
 }

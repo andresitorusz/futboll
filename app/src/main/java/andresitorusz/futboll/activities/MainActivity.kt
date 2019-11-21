@@ -1,6 +1,7 @@
 package andresitorusz.futboll.activities
 
 import andresitorusz.futboll.R
+import andresitorusz.futboll.fragments.LeagueFragment
 import andresitorusz.futboll.fragments.match.MatchFragment
 import andresitorusz.futboll.fragments.team.TeamFragment
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        supportActionBar?.title = "Futboll"
         bottom_nav_view.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
         if (savedInstanceState == null) {
@@ -47,6 +48,18 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.teams_fragment_item -> {
                     val fragment = TeamFragment()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(
+                            R.id.main_container,
+                            fragment,
+                            fragment.javaClass.simpleName
+                        )
+                        .commit()
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.league_fragment_item -> {
+                    val fragment = LeagueFragment()
                     supportFragmentManager
                         .beginTransaction()
                         .replace(

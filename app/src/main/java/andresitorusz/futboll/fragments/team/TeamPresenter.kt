@@ -49,22 +49,6 @@ class TeamPresenter(
         jobLeague?.start()
     }
 
-    fun searchTeam(teamName: String?) {
-        teamView.showLoading()
-        GlobalScope.launch(context.main) {
-            val data: TeamResponse? = gson.fromJson(
-                repository.doRequest(TheSportDBAPI.searchTeam(teamName)),
-                TeamResponse::class.java
-            )
-            try {
-                teamView.showTeamList(data?.teams?.filter { it.teamSport.equals("Soccer") })
-            } catch (e: NullPointerException) {
-                teamView.showEmpty()
-            }
-            teamView.hideLoading()
-        }
-    }
-
     fun cancelCoroutine() {
         if (jobLeague!!.isActive && !(jobLeague!!.isCompleted)) {
             jobLeague!!.cancel()

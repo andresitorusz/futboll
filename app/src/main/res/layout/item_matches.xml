@@ -44,7 +44,8 @@
                         android:layout_toStartOf="@id/match_home_score"
                         android:layout_toLeftOf="@id/match_home_score"
                         android:gravity="end"
-                        android:textSize="15sp" />
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
 
                 <TextView
                         android:id="@+id/match_home_score"
@@ -55,7 +56,8 @@
                         android:layout_toLeftOf="@id/text_view_versus"
                         android:paddingStart="8dp"
                         android:paddingLeft="8dp"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                 <TextView
                         android:id="@+id/text_view_versus"
@@ -75,7 +77,8 @@
                         android:layout_toRightOf="@id/text_view_versus"
                         android:paddingStart="10dp"
                         android:paddingRight="10dp"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                 <TextView
                         android:id="@+id/match_away_team"
@@ -85,7 +88,8 @@
                         android:layout_toEndOf="@id/match_away_score"
                         android:layout_toRightOf="@id/match_away_score"
                         android:gravity="start"
-                        android:textSize="15sp" />
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
 
             </RelativeLayout>
 

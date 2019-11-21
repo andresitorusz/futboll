@@ -30,6 +30,7 @@ class MatchDetailActivity : AppCompatActivity(), MatchDetailContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_match_detail)
+        supportActionBar?.title = "Futboll"
 
         itemList = intent.getParcelableExtra(KEY_MATCH)
         presenter = MatchDetailPresenter(this, ApiRepository(), Gson(), this)

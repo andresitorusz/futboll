@@ -13,6 +13,13 @@
             android:elevation="0dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+<!--                <androidx.appcompat.widget.SearchView-->
+<!--                        android:id="@+id/search_matches"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_gravity="end"-->
+<!--                        android:maxWidth="10000dp" />-->
+
         <com.google.android.material.tabs.TabLayout
                 android:id="@+id/match_tab"
                 android:layout_width="match_parent"

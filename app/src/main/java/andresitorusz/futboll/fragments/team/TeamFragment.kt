@@ -17,6 +17,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_team.*
 
@@ -38,11 +39,15 @@ class TeamFragment : Fragment(), TeamContract.View {
         return inflater.inflate(R.layout.fragment_team, container, false)
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        setHasOptionsMenu(true)
+        super.onCreate(savedInstanceState)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setHasOptionsMenu(true)
         adapter = TeamAdapter(teamLists)
-        rv_team.layoutManager = GridLayoutManager(context, 3)
+        rv_team.layoutManager = GridLayoutManager(context, 3) as RecyclerView.LayoutManager?
         rv_team.adapter = adapter
         presenter =
             TeamPresenter(this, ApiRepository(), Gson())

@@ -3,9 +3,6 @@ package andresitorusz.futboll.fragments.match.next
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 
 import andresitorusz.futboll.R
 import andresitorusz.futboll.adapters.EventAdapter
@@ -15,6 +12,7 @@ import andresitorusz.futboll.models.Match
 import andresitorusz.futboll.networks.ApiRepository
 import andresitorusz.futboll.utils.invisible
 import andresitorusz.futboll.utils.visible
+import android.view.*
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -108,4 +106,8 @@ class NextEventFragment : Fragment(), EventContract.View {
         presenter.cancelCoroutine()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.search_matches, menu)
+    }
 }
